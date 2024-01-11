@@ -50,6 +50,7 @@ void getLead(int arr[], int n)
             leader[count++] = arr[currLead];
         }
     }
+    //print leader in reverse order
     for(int i = count - 1; i >= 0; i--)
     {
         cout<<leader[i]<<" ";
