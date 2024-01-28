@@ -29,6 +29,7 @@
 
 
 //Efficient Approach
+//Kadane's algo
 
 #include<iostream>
 using namespace std;
@@ -48,6 +49,6 @@ int maxSum(int arr[], int n)
 
 int main()
 {
-    int arr[] = {-3,8,-2,4,-5,6};
-    cout<<maxSum(arr,6);
+    int arr[] = {-5,1,-2,3,-1,2,-2};
+    cout<<maxSum(arr,7);
 }
