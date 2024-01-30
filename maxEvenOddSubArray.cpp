@@ -82,6 +82,6 @@ int getMaxOddEven(int arr[], int n)
 }
 
 int main() {
-  int arr[] = {13,10,111};
+  int arr[] = {13,10,11};
   cout<<getMaxOddEven(arr,3);
 }
