@@ -33,6 +33,8 @@
 // }
 
 //Another Approach
+/*It will give the majority element and if you want the index change
+the return arr[i] to return i */
 // #include<iostream>
 // #include<algorithm>
 // using namespace std;
@@ -40,9 +42,27 @@
 // int getMajorityElem(int arr[], int n)
 // {
 //     sort(arr, arr + n);
-    
+//     if(n == 1)//if there is only one elem in array
+//     {
+//         return arr[0];
+//     }
+//     int freq = 1;
+//     for(int i = 1; i < n; i++)
+//     {
+//         if(arr[i] == arr[i-1])
+//         {
+//             freq++;
+//         }
+//         else{
+//             freq = 1;
+//         };
+//         if(freq > n/2)
+//         {
+//             return arr[i];
+//         }
+//     }
+//     return -1;
 // }
-
 
 
 
