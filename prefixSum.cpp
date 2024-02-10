@@ -1,50 +1,42 @@
 //Naive Approach
 // #include<iostream>
 // using namespace std;
-// int getSum(int l, int r, int arr[])
+// int getSum(int arr[],int s, int e)
 // {
 //     int res = 0;
-//     for(int i = l; i <= r; i++)
+//     for(int i = s; i <= e; i++)
 //     {
 //         res += arr[i];
-//         return res;
 //     }
+//     return res;
 // }
 
 
 // int main()
 // {
 //     int arr[] = {2,8,3,9,6,5,4};
-//     cout<<getSum(1,3,arr);
+//     cout<<getSum(arr,0,2);
 // }
 
 //Efficient Approach
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int arr[] = {2, 8, 3, 9, 6, 5, 4};
-int n = 7;
-int pr[7];
-
-int getSum(int l, int r)
-{
-    if(l == 0)
+int getSum(int pSum[], int l, int r){
+    if(l==0)
     {
-        return pr[r];
+        return pSum[r];
     }
-    return pr[r] - pr[l-1];
+    return pSum[r]-pSum[l-1];
 }
 
-int main()
-{
-    pr[0] = arr[0];
-    for(int i = 1; i < n; i++)
-    {
-        pr[i] = pr[i-1] + arr[i];
-    }
-
-    // Corrected function call
-    cout << getSum(2, 6);
-
+int main(){
+    int arr[]={3,1,4,2,2,1};
+    int n=6;
+    int pSum[n];
+    pSum[0] = arr[0];
+    for(int i=1; i<n; i++)
+        pSum[i] = pSum[i-1]+ arr[i];
+   cout<<getSum(pSum,2,5); 
     return 0;
 }
